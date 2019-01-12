@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="lose_weight.css"> 
+    <title>Healthy lifestyle</title>
+
+        
+</head>
+<body>
+    <div class="button_back">
+        <a href="first_page.html">Back to main page</a>
+    </div>
+    <section class="container container_header_second">
+        <h1>We create customized diets made according to your preferences.</h1>
+    </section>
+    <div class="container container_advice"> 
+        <p id="first_p"><b>So, you want to lose some weight. That's good! You are on the right track.</b></p>
+        <p>Please, take this advice before you start:</p> 
+        <ol>
+            <li>You must be patient. Patience is the key.</li>
+            <li>Be honest with you, and if you feel like you want to quit, remember why you started.</li>
+            <li>You can cheat, but don't make this a habit.</li>
+            <li>Eat frequently and maintain a high metabolism.</li> 
+            <li>Rest is very important, so sleep 6 to 8 hours a day.</li>
+        </ol>
+    </div>
+    <section class="container container_formular">
+        <h3>Please complete this with your personal data:</h3>
+
+        <h4>How much do you weight?</h4>
+        <input type="number" id ="greutate" name="greutate" placeholder="Your weight in kg" required>
+        <button onclick="getValuesG()" type="submit">Go</button>
+
+        <h4>How tall are you?</h4>
+        <input type="number" id="inaltime" name="inaltime" placeholder="Your height in cm" required>
+        <button onclick="getValuesI()" type="submit">Go</button>
+        
+
+        <h4>What's your activity level?</h4>
+        <div class="alert">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+            <details>
+                <summary>Notice that your activity level is a number between 14 and 16, which represents how active, or how sedentary are you.<br>
+                (14-very sedentary, 15-moderate activity, 16-very active) </summary>
+            </details>
+        </div>
+        <div class=activity_button>
+            <input type="number" id="nivel_activitate" name="nivel_activitate" placeholder="14-16" required>
+            <button id="go_button" type="submit" onclick="Calculeaza()">Go</button>
+        </div>
+        <p id="null_content"></p>
+    
+        
+
+    <article>
+        <h3>It is known that a balanced diet is composed of meals rich in essential macronutrients and micronutrients for the good functioning of the body.</h3>
+        <p class="article_p">Choose your preffered foods rich in protein: (minimum 4)</p>
+        
+       
+        <div class="container_food container_protein_food" onclick="clickedImgP(this.id);">
+            <ul>
+                <li><img id="p1" alt="photo_1" onclick="function_p1()" src="photo/chicken.png"></li>  
+                <li><img id="p2" alt="photo_2" onclick="function_p2()" src="photo/ton.jpg"></li>
+                <li><img id="p3" alt="photo_3" onclick="function_p3()" src="photo/vita.jpg"></li>
+                <li><img id="p4" alt="photo_4" onclick="function_p4()" src="photo/muschi_de_porc.jpg"></li>
+                <li><img id="p5" alt="photo_5" onclick="function_p5()" src="photo/cottage.jpg"></li>
+                <li><img id="p6" alt="photo_6" onclick="function_p6()" src="photo/curcan.jpeg"></li>
+                <li><img id="p7" alt="photo_7" onclick="function_p7()" src="photo/oua.jpg"></li>
+                <li><img id="p8" alt="photo_8" onclick="function_p8()" src="photo/somon.png"></li> 
+                <li><img id="p9" alt="photo_9" onclick="function_p9()" src="photo/soia.jpg"></li> 
+                
+            </ul>
+        </div>
+
+        <div class="container_food container_carbs_food" onclick="clickedImgC(this.id);">
+            <p class="article_p">Choose your preffered foods rich in carbohydrates: (minimum 5)</p>
+            <ul>
+                <li><img id="c1" alt="photo_10" onclick="function_c1()" src="photo/orez.jpg"></li>  
+                <li><img id="c2" alt="photo_11" onclick="function_c2()" src="photo/cartofi.jpg"></li>
+                <li><img id="c3" alt="photo_12" onclick="function_c3()" src="photo/cartofi_dulci.jpg"></li>
+                <li><img id="c4" alt="photo_13" onclick="function_c4()" src="photo/paste_integrale.jpg"></li>
+                <li><img id="c5" alt="photo_14" onclick="function_c5()" src="photo/fulgi_de_ovaz.jpg"></li>
+                <li><img id="c6" alt="photo_15" onclick="function_c6()" src="photo/paine_integrala.jpg"></li>
+                <li><img id="c7" alt="photo_16" onclick="function_c7()" src="photo/fasole.jpg"></li>
+                <li><img id="c8" alt="photo_17" onclick="function_c8()" src="photo/quinoa.png"></li> 
+                <li><img id="c9" alt="photo_18" onclick="function_c9()" src="photo/fulgi_de_porumb.jpg"></li> 
+            </ul>
+        </div>
+
+        <div class="container_food container_fats_food" onclick="clickedImgF(this.id);">
+            <p class="article_p">Choose your preffered foods rich in healthy fats: (minimum 3)</p>
+            <ul>
+                <li><img id="f1" alt="photo_19" onclick="function_f1()" src="photo/seminte_de_in.jpg"></li>  
+                <li><img id="f2" alt="photo_20" onclick="function_f2()" src="photo/avocado.jpg"></li>
+                <li><img id="f3" alt="photo_21" onclick="function_f3()" src="photo/migdale.jpg"></li>
+                <li><img id="f4" alt="photo_22" onclick="function_f4()" src="photo/alune.png"></li>
+                <li><img id="f5" alt="photo_22" onclick="function_f5()" src="photo/ulei_de_masline.jpg"></li>
+                <li><img id="f6" alt="photo_23" onclick="function_f6()" src="photo/nuci.jpg"></li>
+                <li><img id="f7" alt="photo_24" onclick="function_f7()" src="photo/caju.jpg"></li>
+                <li><img id="f8" alt="photo_25" onclick="function_f8()" src="photo/masline.jpg"></li> 
+                <li><img id="f9" alt="photo_26" onclick="function_f9()" src="photo/unt_de_arahide.jpg"></li> 
+            </ul>
+        </div>
+
+        <div class="container_food container_snacks" onclick="clickedImgS(this.id);">
+            <p class="article_p">Choose your preffered healthy snacks: (minimum 5)</p>
+            <ul>
+                <li><img id="s1" alt="photo_27" onclick="function_s1()" src="photo/mere.jpg"></li>       
+                <li><img id="s2" alt="photo_28" onclick="function_s2()" src="photo/banane.jpg"></li>
+                <li><img id="s3" alt="photo_29" onclick="function_s3()" src="photo/shake_proteic.webp"></li>
+                <li><img id="s4" alt="photo_30" onclick="function_s4()" src="photo/baton_proteic.jpg"></li>
+                <li><img id="s5" alt="photo_31" onclick="function_s5()" src="photo/iaurt_grecesc.jpg"></li>
+                <li><img id="s6" alt="photo_32" onclick="function_s6()" src="photo/fructe_uscate.jpg"></li>
+                <li><img id="s7" alt="photo_33" onclick="function_s7()" src="photo/smoothie.jpg"></li>
+                <li><img id="s8" alt="photo_34" onclick="function_s8()" src="photo/ciocolata_neagra.jpg"></li> 
+                <li><img id="s9" alt="photo_35" onclick="function_s9()" src="photo/biscuiti.jpg"></li> 
+
+            </ul>
+            
+        </div>
+
+       
+
+    </article>
+        <p id="submit_button" onclick="generateDiet()">GENERATE MEALS<p>
+        <p id="propunere"></p>
+        <ol id="list"></ol>
+        
+        
+    </section>
+   
+<script src="javascript.js"></script>
+</body>
+</html>

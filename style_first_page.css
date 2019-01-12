@@ -1,0 +1,132 @@
+.container{
+    background-color: #F8F8F8;  
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    border: 2px solid gray;
+    width: 900px;
+    padding: 25px; 
+}
+header h1{
+    letter-spacing: 2px;
+    text-shadow: 1.5px 1px #C0C0C0;
+    text-align: center;
+    font-size: 40px;
+}
+header p{
+    /*letter-spacing: 1px; */
+    font-family: "Courier New", "Lucida Console";
+    font-size: 20px;
+    text-align: center;
+    
+    
+}
+.container_nav{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+section h2{
+    text-align: center;
+    font-size: 35px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0; 
+        overflow: hidden;
+       /* background-color: #C0C0C0; */ 
+}
+li{
+    float: left;
+    margin: 10px 0 10px 65px;
+    
+}
+li a{
+        display: block;
+        text-align: center;
+        padding: 14px 35px;
+        text-decoration: none;
+        color:	#303030;
+        border: 0.1px solid gray;
+        background-color: rgba(200,200,200,0.4);
+}
+li a:hover {
+    background-color: #D0D0D0;
+   /* font-size: 17px; */
+   transform: scale(1.1);
+}
+.container_photo{
+   /* width: 40%; */
+    text-align: center;
+    padding: 0px 0px 0px 0px;
+    /*display: inline;*/
+    width: 950px;
+    /* margin-left: 385px; */
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid gray;
+   /* display: block; */
+    background-color: #F8F8F8;
+    
+    
+
+}
+.photo{
+   width: 298px;
+   height: 250px;
+   margin: 8px;
+   padding-top: 0;
+}
+
+footer{
+    text-align: center;
+    font-family: "Courier New", "Lucida Console";
+    font-weight: bold;
+}
+
+@media only screen and (min-width: 150px) and (max-width: 768px)
+{
+    .body {
+        width: 90%;
+        font-size: 95%;
+    }
+    .container{
+        margin-top: 30px;
+        width: auto;
+    }
+    
+    .photo{
+        width: 124px;
+        height: 130px;
+        margin: auto;
+        
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1280px)
+{
+    .body {
+        width: 90%;
+        font-size: 80%;
+    }
+
+    .container{
+        margin-top: 30px; 
+        width: auto;
+    }
+
+    .container_nav ul li{
+        margin: auto;
+       
+    }
+
+    .photo{
+        /* width: 200px; */
+        /* width: auto; */
+       
+        width: 200px;
+        height: 200px;
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "nr_Cal": [
+      { "id": 1, "name": "greutate"},
+      { "id": 2, "name": "inaltime"},
+      { "id": 3, "name": "nivel"}
+     
+    ]
+}
